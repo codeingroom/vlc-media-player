@@ -1,0 +1,97 @@
+﻿<html>
+<head>
+<title>VLC Video Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=0.86">
+	
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body onload="dura()">
+<div class="main" id="main">
+<div class="sub_main">
+<div class="top_sec">
+
+<div class="logo">
+<img src="vlc.png" class="logo_img">
+<p class="title">VLC Media Player</p>
+</div>
+
+<div class="right">
+<button class="rt1" style="position: absolute;left: 0px;top: 0px;"><i class="fa-solid fa-window-minimize" style="margin-top: -7px;"></i></button>
+<button class="rt1" style="position: absolute;top: 0px;"><i class="fa-solid fa-window-restore"></i></button>
+<button class="rt1" style="position: absolute;right: 0px;top: 0px;"><i class="fa-solid fa-xmark"></i></button>
+</div>
+
+</div>
+<div class="top_sec1">
+<ul class="ullist">
+<li class="lilist">Media</li>
+<li class="lilist">Playback</li>
+<li class="lilist">Audio</li>
+<li class="lilist">Video</li>
+<li class="lilist">Tools</li>
+<li class="lilist">View</li>
+<li class="lilist" onclick="about()">About</li>
+</ul>
+</div>
+</div>
+
+<div class="sub_main1">
+<video id="video_value" ontimeupdate="gettime()" class="video_play">
+<source src="1.mp4">
+</video>
+
+</div>
+<div class="next" id="next">
+<button class="next_btn" id="canc" style="position: absolute;right: 0px;top: 0px;"><i class="fa-solid fa-xmark"></i></button>
+<p class="infos">Sorry There Is Only One Video In The PlayList.</p>
+</div>
+
+<div class="next" id="next1">
+<button class="next_btn" onclick="canc1()" style="position: absolute;right: 0px;top: 0px;"><i class="fa-solid fa-xmark"></i></button>
+<p class="infos" style="font-family: 'FontAwesome';"><b>Developer : </b> Bhanu Pratap Singh<br><br><b>Date : </b>05-07-2022<br><br><b>Software Name : </b> VLC  Video   Player<br><br><b>Software Version : </b>1.0</p>
+</div>
+
+<div class="sub_main2">
+
+<div class="top_bottom">
+<div class="time_lf" id="lf"><b><span id="min">00</span>:<span id="sec">00</span></b></div>
+<div class="progress">
+
+<div class="progress_bar" id="cp">
+<div class="pg" id="progs"></div>
+
+</div>
+
+</div>
+<div class="time_ri" id="rt"><b>00:00</b></div>
+</div>
+
+<div class="bottom_bottom">
+<button class="btn" id="play" onclick="play_video()"><i class="fa-solid fa-play"></i></button>
+<button class="btn1" id="bk"><i class="fa-solid fa-angles-left"></i></button>
+<button class="btn1" id="starting"><i class="fa-solid fa-stop"></i></button>
+<button class="btn1" id="bk1"><i class="fa-solid fa-angles-right"></i></button>
+<button class="btn1" id="full" onclick="fullscr()"><i class="fa-solid fa-expand"></i></button>
+<button class="btn1"><i class="fa-solid fa-gear"></i></button>
+<button class="btn1"><i class="fa-solid fa-list"></i></button>
+<button class="btn1" id="back" onclick="backward()"><i class="fa-solid fa-backward-step"></i></button>
+<button class="btn1" id="forw" onclick="forward()"><i class="fa-solid fa-forward-step"></i></button>
+
+<div class="volume">
+
+<div id="ico" style="margin: 10px;">
+<i class="fa-solid fa-volume-high" style="margin: 10px;" onclick="volc()"></i>
+</div>
+
+<input type="range" min="1" max="100" class="vol" oninput="volumefun(this.value)" onchange="volumefun(this.value)"></div>
+</div>
+
+</div>
+
+</div>
+<script src="javascript.js"></script>
+</body>
+</html>
